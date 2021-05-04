@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 /// <summary>
 /// Namespace for the models/custom data structures involved in Restaurant Reviews
 /// </summary>
@@ -30,29 +32,29 @@ namespace RRModels
         /// This describes the name of your restaurant
         /// </summary>
         /// <value></value>
-        public string Name { get; }
+        public string Name { get; set; }
 
         /// <summary>
         /// This describes the city of the restaurant location
         /// </summary>
         /// <value></value>
-        public string City { get; }
+        public string City { get; set; }
         
         /// <summary>
         /// State location of the restaurant
         /// </summary>
         /// <value></value>
-        public string State { get; }
+        public string State { get; set; }
         
         /// <summary>
         /// This contains the review of a particular restaurant
         /// </summary>
         /// <value></value>
-        public Review Review { get; set; }
+        public List<Review> Reviews { get; set; }
 
         public override string ToString()
         {
-            return $" Name: {Name} \t\n Location: {City}, {State} \t\n Review: {Review.ToString()}";
+            return $" Name: {Name} \t\n Location: {City}, {State}";
         }
     }
 }
