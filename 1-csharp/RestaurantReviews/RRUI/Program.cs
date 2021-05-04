@@ -8,23 +8,9 @@ namespace RRUI
     {
         static void Main(string[] args)
         {
-            Restaurant goodTaste = new Restaurant("Good Taste", "Baguio City", "Benguet");
-            goodTaste.Reviews = new List<Review> {
-                new Review {
-                    Rating = 5,
-                    Description = "A M A Z I N G"
-                },
-                new Review {
-                    Rating = 5,
-                    Description = "Good food for cheap"
-                }
-            };
-
-            Console.WriteLine(goodTaste.ToString());
-            foreach (Review review in goodTaste.Reviews)
-            {
-                Console.WriteLine(review.ToString());
-            }
+            //setting aparent type to an instance of a subtype is called covariance
+            IMenu menu = new MainMenu();
+            menu.Start();
         }
     }
 }
