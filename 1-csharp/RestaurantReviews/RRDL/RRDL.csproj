@@ -4,12 +4,7 @@
     <ProjectReference Include="..\RRModels\RRModels.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\RRBL\RRBL.csproj" />
-  </ItemGroup>
-
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
