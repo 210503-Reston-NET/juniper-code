@@ -9,8 +9,7 @@ namespace RRUI
         static void Main(string[] args)
         {
             //setting aparent type to an instance of a subtype is called covariance
-            IMenu menu = new MainMenu();
-            menu.Start();
+            MenuFactory.GetMenu("main").Start();
         }
     }
 }

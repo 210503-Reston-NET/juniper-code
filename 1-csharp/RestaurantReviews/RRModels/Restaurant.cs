@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 /// <summary>
 /// Namespace for the models/custom data structures involved in Restaurant Reviews
@@ -17,6 +19,7 @@ namespace RRModels
         // 4. Properties - also known as smart fields, are accessor methods used to access private backing fields
         // *Note that properties are analogous to Java getter and setter
         //* Property naming convention uses PascalCase
+        string _city;
         public Restaurant(string name, string city, string state)
         {
             this.Name = name;
@@ -38,7 +41,16 @@ namespace RRModels
         /// This describes the city of the restaurant location
         /// </summary>
         /// <value></value>
-        public string City { get; set; }
+        public string City 
+        { 
+            get { return _city; }
+            set
+            {
+                if (!Regex.IsMatch(value, @"^[A-Za-z .]+$")) throw new Exception("City cannot have numbers!");
+                else _city = value;
+            }
+        
+        }
         
         /// <summary>
         /// State location of the restaurant
