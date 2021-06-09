@@ -1,0 +1,13 @@
+.logo > a {
+    color: darkolivegreen;
+}
+
+.logo > a:hover {
+    color: darkgreen;
+}
+
+.center > h1
+{
+    width: 100%;
+    align-items: center;
+}
